@@ -33,3 +33,6 @@ Next session plans:
 I plan to work on the API routes tonight, I'll start with one and make sure I can fetch what I need, then go from there. I should review how to use curl properly while I'm at it since I didn't practice with it very much in school.
 
 ...
+
+Connected to a remote repo before I forget again!
+
