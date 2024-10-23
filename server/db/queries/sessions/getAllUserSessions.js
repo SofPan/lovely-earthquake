@@ -1,22 +1,14 @@
 
 const db = require("../../connection");
-
-const getAllUserSessions = userId => {
+const getAllUserSessions = async userId => {
   const value = [userId]
 
-  // const query = `
-  //   SELECT *
-  //   FROM sessions
-  //   JOIN users ON sessions.user_id = users.id
-  //   WHERE user_id = $1;
-  // `;
   const query = `
     SELECT *
-    FROM sittings
-    WHERE user_id = $1;
+    FROM sessions;
   `;
 
-  return db.query(query, value)
+  return db.query(query)
     .then(results => {
       console.log("results", results);
       return results.rows;

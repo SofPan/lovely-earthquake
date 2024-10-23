@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS historic_sittings CASCADE;
-DROP TABLE IF EXISTS sittings CASCADE;
+DROP TABLE IF EXISTS historic_sessions CASCADE;
+DROP TABLE IF EXISTS sessions CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
 
 CREATE TABLE users (
@@ -10,11 +10,11 @@ CREATE TABLE users (
   last_login TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE sittings (
+CREATE TABLE sessions (
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  sitting_name TEXT,
-  sitting_type TEXT,
+  session_name TEXT,
+  session_type TEXT,
   duration INTEGER DEFAULT 0, -- Time in milliseconds, 0 for indefinite
   breathing_in_time INTEGER, -- Time in milliseconds
   breathing_out_time INTEGER, -- Time in milliseconds
@@ -23,9 +23,9 @@ CREATE TABLE sittings (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE historic_sittings (
+CREATE TABLE historic_sessions (
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  sitting_id INTEGER REFERENCES sittings(id) ON DELETE CASCADE,
-  sitting_date DATE
+  session_id INTEGER REFERENCES sessions(id) ON DELETE CASCADE,
+  session_date DATE
 );
