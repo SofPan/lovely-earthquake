@@ -59,3 +59,22 @@ So I am getting the wrong database entirely, somehow. I am getting the DB for pr
 It's actually pulling in from my default user database. For now I am hardcoding in the meditation table to get the queries working, and I will circle back later today to understand/fix this issue. PG pool is pulling in all my other environment variables correctly so I don't know why this database name would not work. I will find out though!
 
 Finished up the basics for the routes, with DB queries. I need to implement password hashing but I want to work on that alongside any frontend forms relating to login/registration. I may need to rework some of the queries later as well.
+
+Created a starter React Component Tree, and created skeleton components so I have a foundation to start from. I think I need to find a better way to handle all the buttons, there's probably a way to hand state down to maybe a few buttons instead of needing a component for each individual type. I also want to refer back to Photolabs project for handling favorite state across the entire application.
+
+Last thing on the to-do list for today is to research JS/React animation libraries. 
+
+Top pick at the moment is [React Countdown Circle](https://www.npmjs.com/package/react-countdown-circle-timer)
+  * I want to experiment with the stroke width and transitions to see if I will get what I want with breathe in/out animations
+
+Follow up pick is to just do it myself, I can refer to this [Codepen](https://codepen.io/AliKlein/pen/LYpmJed) to get started and figure out the in/out animation from there.
+
+I'm really happy with my progress on the app today. I think I have all the groundwork pretty much done. Now it's time to get building!
+
+Next Session:
+  * Display backend data on the frontend
+  * Fix the db environment variables not pulling in correctly
+  * Build the countdown component and make sure it works with different properties
+  * Experiment with the countdown circle library to see if it encompasses all my needs
+    * If yes, work on getting dynamic values in there and work in conjunction with the countdown
+    * If not, work on authentication / forms instead
