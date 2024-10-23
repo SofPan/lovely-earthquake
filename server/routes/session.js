@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 const { getAllUserSessions } = require('../db/queries/sessions/getAllUserSessions');
-const { getSessionById } = require('../db/queries/sessions/getSessionById')
+const { getSessionById } = require('../db/queries/sessions/getSessionById');
+const { createNewSession } = require('../db/queries/sessions/createNewSession');
+const { deleteSession } = require('../db/queries/sessions/deleteSession');
+const { editSession } = require('../db/queries/sessions/editSession');
 /*
   - A user should only be able to access default sessions,
   and the user's custom sessions.
@@ -44,15 +47,32 @@ router.get('/:id', (req, res) => {
 
 // POST a new session
 router.post('/', (req, res) => {
-  res.status(200).json({ message: "posting a new session" });
+  createNewSession(req.body)
+    .then(result => result)
+    .catch(error => {
+      console.error('Error creating session:', error);
+      res.status(500).json({ error: 'Session could not be created' });
+    })
 });
 
+// Edit existing session
 router.put('/:id', (req, res) => {
-  res.status(200).json({ message: "editing an existing session" });
+  editSession(req.body)
+    .then(result => result)
+    .catch(error => {
+      console.error('Error editing session:', error);
+      res.status(500).json({ error: 'Session could not be edited' });
+    })
 });
 
+// Delete existing session
 router.delete('/:id', (req, res) => {
-  res.status(200).json({ message: "deleting session" });
+  deleteSession(req.params.id)
+    .then(result => result)
+    .catch(error => {
+      console.error('Error deleting session:', error);
+      res.status(500).json({ error: 'Session could not be deleted' });
+    })
 });
 
 module.exports = router;
