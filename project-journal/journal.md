@@ -57,3 +57,5 @@ Starting with figuring out why my query doesn't see my table today. From what I 
 So I am getting the wrong database entirely, somehow. I am getting the DB for project Silvia when I should be getting table name "meditation". My environment variable is declared correctly, so why is this happening?
 
 It's actually pulling in from my default user database. For now I am hardcoding in the meditation table to get the queries working, and I will circle back later today to understand/fix this issue. PG pool is pulling in all my other environment variables correctly so I don't know why this database name would not work. I will find out though!
+
+Finished up the basics for the routes, with DB queries. I need to implement password hashing but I want to work on that alongside any frontend forms relating to login/registration. I may need to rework some of the queries later as well.
