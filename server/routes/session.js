@@ -1,11 +1,26 @@
 const express = require('express');
 const router = express.Router();
 
+const { getAllUserSessions } = require('../db/queries/sessions/getAllUserSessions')
 /*
   - A user should only be able to access default sessions,
   and the user's custom sessions.
   - The user's id filters the database
 */
+
+// GET all available sessions for the current user
+
+router.get('/', (req, res) => {
+  const userId = req.session.userId;
+  getAllUserSessions(userId)
+    .then(data => {
+      res.json(data);
+    })
+    .catch(error => {
+      console.error('Error fetching sessions:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    });
+})
 
 // GET the saved session
 router.get('/:id', (req, res) => {

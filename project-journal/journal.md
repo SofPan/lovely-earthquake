@@ -42,9 +42,10 @@ I might get interrupted soon for dinner, I am implementing user cookies and mock
 
 Alright, I have cookie-session going, just automatically setting a cookie for User 1 at the moment the landing page loads until I revisit login later.
 
-
+I need to revisit my first database query. For some reason the sessions/sittings table does not exist? Even though I can see it in psql? I'll have to check this out in the morning, we have to get to bed for the night. 
 
 Next session plans:
+* Figure out what's up with the tables (users exists, sessions do not?)
 * Finish routes work
 * Prepare basic React components structure
 * Research JS/React animations libraries
