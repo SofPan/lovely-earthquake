@@ -10,8 +10,10 @@ const router = express.Router();
 // GET the saved session
 router.get('/:id', (req, res) => {
   const sessionId = req.params.id;
+  const userId = req.session.userId;
 
   console.log("The session id is", sessionId);
+  console.log("the user ID is", userId);
 
   res.status(200).json({ id: sessionId });
 });

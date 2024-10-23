@@ -36,3 +36,16 @@ I plan to work on the API routes tonight, I'll start with one and make sure I ca
 
 Connected to a remote repo before I forget again!
 
+I put in placeholder routes, everything gives a 200 status at the moment until I work in database queries.
+
+I might get interrupted soon for dinner, I am implementing user cookies and mocking a successful login attempt so I can use the user ID to filter sessions in the database. I will revisit the login route later to implement password hash checking.
+
+Alright, I have cookie-session going, just automatically setting a cookie for User 1 at the moment the landing page loads until I revisit login later.
+
+
+
+Next session plans:
+* Finish routes work
+* Prepare basic React components structure
+* Research JS/React animations libraries
+

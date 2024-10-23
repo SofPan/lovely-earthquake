@@ -1,4 +1,5 @@
 const express = require('express');
+const cookieSession = require('cookie-session');
 
 const morgan = require('morgan');
 
@@ -11,11 +12,28 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-const sessionRoutes = require('./routes/session');
+app.use(cookieSession({
+  name: 'session',
+  keys: ["replaceMe"],
 
-app.use('/session', sessionRoutes);
+  // Cookie Options
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}))
+
+const loginRoute = require('./routes/login');
+const logoutRoute = require('./routes/logout');
+const registerRoute = require('./routes/register');
+const sessionRoute = require('./routes/session');
+const historyRoute = require('./routes/history');
+
+app.use('/login', loginRoute);
+app.use('/logout', logoutRoute);
+app.use('/register', registerRoute);
+app.use('/session', sessionRoute);
+app.use('/history', historyRoute);
 
 app.get('/', (req, res) => {
+  req.session.userId = 1;
   res.status(200).json();
 })
 
