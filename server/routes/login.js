@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+  req.session.userId = 1;
   res.status(200).json({ message: "submitting login form" })
 });
 

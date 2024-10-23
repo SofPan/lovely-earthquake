@@ -33,8 +33,7 @@ app.use('/session', sessionRoute);
 app.use('/history', historyRoute);
 
 app.get('/', (req, res) => {
-  req.session.userId = 1;
-  res.status(200).json();
+  res.status(200).json("Landing Page");
 })
 
 
