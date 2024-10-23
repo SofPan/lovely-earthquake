@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const { getAllUserSessions } = require('../db/queries/sessions/getAllUserSessions')
+const { getAllUserSessions } = require('../db/queries/sessions/getAllUserSessions');
+const { getSessionById } = require('../db/queries/sessions/getSessionById')
 /*
   - A user should only be able to access default sessions,
   and the user's custom sessions.
@@ -27,10 +28,18 @@ router.get('/:id', (req, res) => {
   const sessionId = req.params.id;
   const userId = req.session.userId;
 
-  console.log("The session id is", sessionId);
-  console.log("the user ID is", userId);
-
-  res.status(200).json({ id: sessionId });
+  getSessionById(sessionId)
+    .then(data => {
+      if (data.user_id === 1 || data.user_id === userId) {
+        res.json(data);
+      } else {
+        throw new Error()
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching sessions:', error);
+      res.status(500).json({ error: 'You do not have access to this page' });
+    });
 });
 
 // POST a new session

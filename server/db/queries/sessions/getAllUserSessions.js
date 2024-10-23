@@ -5,10 +5,13 @@ const getAllUserSessions = async userId => {
 
   const query = `
     SELECT *
-    FROM sessions;
+    FROM sessions
+    JOIN users ON users.id = sessions.user_id
+    WHERE user_id = $1
+    ;
   `;
 
-  return db.query(query)
+  return db.query(query, value)
     .then(results => {
       console.log("results", results);
       return results.rows;
