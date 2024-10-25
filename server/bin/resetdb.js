@@ -26,8 +26,8 @@ const runSeedFiles = async () => {
 
 const runResetDB = async () => {
   try {
-    if (process.env.DB_HOST && process.env.DB_USER && process.env.DB_PASS) {
-      console.log(`-> Connecting to PG on ${process.env.DB_HOST} as ${process.env.DB_USER}...`);
+    if (process.env.PGHOST && process.env.PGUSER && process.env.PGPASS) {
+      console.log(`-> Connecting to PG on ${process.env.PGHOST} as ${process.env.PGUSER}...`);
     } else {
       console.error('Missing database environment variables.');
       process.exit(1);

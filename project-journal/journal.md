@@ -110,3 +110,19 @@ const getRequest = async () => {
 
 Now I want to see what's up with my environment variables so I don't have to hardcode a database name...
 
+So I needed to invoke .config() on dotenv. Cool, cool cool cool, all fixed now!! Weird because I didn't need to do this on past projects, but maybe there's been an update to the package that I didn't notice. I had a look at the package page, the package hasn't been updated since I last used it. I'll keep an eye out for anything that might mention what happened here so I can learn from it, but for now I will take it as a lesson to pay attention to what methods are, or are not, in use.
+
+I have another 20 minutes left before I have to stop for the night, so I'll get started on the countdown component and build it in isolation.
+
+Got the timer running smoothly. I want to prepend a 0 when hours, minutes, or seconds are less than 10 so it looks good. I probably need to move the actual milliseconds logic up to the Timer parent component so the current count can be shared between Countdown and Animation components. Really, the countdown component can probably be renamed clock and just handle the hours/minutes/seconds calculations.
+
+Next Session:
+* Move milliseconds logic to Timer parent component
+* Refactor Countdown component to be Clock and refactor to be used for hours/minutes/seconds calculations
+* Take in user input for countdown time and write helpers to convert user input to milliseconds
+* Max timer at 8 hours
+
+Defer to future sessions:
+* Experiment with the countdown circle library to see if it encompasses all my needs
+    * If yes, work on getting dynamic values in there and work in conjunction with the countdown
+    * If not, work on authentication / forms instead
