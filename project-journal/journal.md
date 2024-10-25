@@ -78,3 +78,35 @@ Next Session:
   * Experiment with the countdown circle library to see if it encompasses all my needs
     * If yes, work on getting dynamic values in there and work in conjunction with the countdown
     * If not, work on authentication / forms instead
+
+### Thursday, October 24, 2024
+I don't have as much time as yesterday, so I'll likely only be addressing one or two items off the next session list today. Going to start with making an API call from my client-side.
+
+Successfully pulled in records from my database to the frontend. 
+
+#### Sample fetch request:
+```React
+const getRequest = async () => {
+  try {
+    // Attempt to GET a response
+    const response = await fetch('http://localhost:8080/session', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    });
+    // If response fails, throw new Error
+    if (!response.ok) {
+      throw new Error('Failed to retrieve sessions');
+    }
+    // Convert successful response to json
+    const responseData = await response.json();
+    // Return the response json
+    return responseData;
+
+  } catch (error) {
+    console.log("error!", error);
+  }
+}
+```
+
+Now I want to see what's up with my environment variables so I don't have to hardcode a database name...
+

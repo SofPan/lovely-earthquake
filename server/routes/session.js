@@ -16,7 +16,7 @@ const { editSession } = require('../db/queries/sessions/editSession');
 
 router.get('/', (req, res) => {
   const userId = req.session.userId;
-  getAllUserSessions(userId)
+  getAllUserSessions(1)
     .then(data => {
       res.json(data);
     })

@@ -1,11 +1,16 @@
 const express = require('express');
 const cookieSession = require('cookie-session');
+const cors = require('cors');
 
 const morgan = require('morgan');
 
 const app = express();
 
 const PORT = process.env.PORT || 8080;
+
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
 
 app.use(express.json());
 app.use(morgan('dev'));
@@ -18,7 +23,8 @@ app.use(cookieSession({
 
   // Cookie Options
   maxAge: 24 * 60 * 60 * 1000 // 24 hours
-}))
+}));
+
 
 const loginRoute = require('./routes/login');
 const logoutRoute = require('./routes/logout');
