@@ -126,3 +126,10 @@ Defer to future sessions:
 * Experiment with the countdown circle library to see if it encompasses all my needs
     * If yes, work on getting dynamic values in there and work in conjunction with the countdown
     * If not, work on authentication / forms instead
+
+### Friday, October 25, 2024
+I can sink an hour into this tonight, so immediately getting to work on the Timer parent component. I managed to move the logic easily enough and it fixed the issue where I was accounting for an asynchronous countdown state.
+
+Doing the above already made the Countdown component work how I wanted it to, just have to change the component name to Clock since that makes more sense.
+
+I forgot to put it into my next session list, but next I want to address pre-pending a 0 to hours/minutes/seconds if the amount is under 10.

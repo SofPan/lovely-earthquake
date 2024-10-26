@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 
-import Countdown from './Countdown';
+import Clock from './Clock';
 
 const Timer = () => {
-  const [time, setTime] = useState(10000);
+  const [time, setTime] = useState(15000);
 
   useEffect(() => {
     if (time > 0){
@@ -16,8 +16,7 @@ const Timer = () => {
 
   return(
     <div>
-      {time}
-      <Countdown time={time}/>
+      <Clock time={time}/>
     </div>
   )
 }
