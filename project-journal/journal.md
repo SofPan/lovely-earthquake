@@ -132,4 +132,8 @@ I can sink an hour into this tonight, so immediately getting to work on the Time
 
 Doing the above already made the Countdown component work how I wanted it to, just have to change the component name to Clock since that makes more sense.
 
-I forgot to put it into my next session list, but next I want to address pre-pending a 0 to hours/minutes/seconds if the amount is under 10.
+I forgot to put it into my next session list, but next I want to address pre-pending a 0 to hours/minutes/seconds if the amount is under 10. I was able to prepend it in place with a value check under 10.
+
+Tested the Timer with durations obtained from the pre-sets in database, and so far it works great. Custom sessions will work the same way as presets so the time conversion logic will be built in when I get the custom functionality in.
+
+Timer maxes out at 8 hours, this limit is even a bit high but if a sound library is implemented later someone might want it to play for an entire workday, or possibly to help them sleep.
