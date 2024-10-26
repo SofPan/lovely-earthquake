@@ -1,10 +1,23 @@
+import { useEffect, useState } from "react";
+
 import Countdown from './Countdown';
 
 const Timer = () => {
+  const [time, setTime] = useState(10000);
+
+  useEffect(() => {
+    if (time > 0){
+      const interval = setInterval(() => {
+        setTime(time - 1000);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  });
+
   return(
     <div>
-      <h1>Countdown Timer Component</h1>
-      <Countdown />
+      {time}
+      <Countdown time={time}/>
     </div>
   )
 }

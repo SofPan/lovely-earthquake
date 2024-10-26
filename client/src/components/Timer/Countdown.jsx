@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Countdown = () => {
-  const [time, setTime] = useState(10000);
+const Countdown = props => {
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
@@ -12,16 +11,12 @@ const Countdown = () => {
     setSeconds(Math.floor((milliseconds / 1000) % 60));
   }
   useEffect(() => {
-    if (time > -1){
-      const interval = setInterval(() => {
-        getTimeRemaining(time);
-        setTime(time - 1000);
-      }, 1000);
-      return () => clearInterval(interval);
-    }
-  });
+    getTimeRemaining(props.time);
+  }, [props.time]);
+
   return(
     <div>
+      <h1>Countdown Timer Component</h1>
       <h2>
         {hours}:{minutes}:{seconds}
       </h2>
