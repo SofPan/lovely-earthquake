@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Clock from './Clock';
+import AnimatedBorder from "./AnimatedBorder";
 
 const Timer = () => {
   const [time, setTime] = useState(0);
@@ -20,6 +21,7 @@ const Timer = () => {
 
   return(
     <div>
+      <AnimatedBorder />
       <Clock time={time}/>
     </div>
   )

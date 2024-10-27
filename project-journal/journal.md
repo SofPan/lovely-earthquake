@@ -137,3 +137,14 @@ I forgot to put it into my next session list, but next I want to address pre-pen
 Tested the Timer with durations obtained from the pre-sets in database, and so far it works great. Custom sessions will work the same way as presets so the time conversion logic will be built in when I get the custom functionality in.
 
 Timer maxes out at 8 hours, this limit is even a bit high but if a sound library is implemented later someone might want it to play for an entire workday, or possibly to help them sleep.
+
+Next Session:
+* Begin working with the countdown circle library, implement a basic countdown to start
+* Once that is working smoothly, see if I can play with options or css to expand and contract the stroke width, or else fill and empty the circle to represent breathing in and out.
+* encompass the Countdown component inside the animation
+* If I can't get the in-out animation that I want, I'll need to research how I can make this work on my own.
+
+### Saturday, October 26, 2024
+
+Having a look over the above Next Session notes, I want to change tack a little. One of the major points of doing this exercise is that I want to get better at CSS animations. So Instead of implementing any sort of library, I am going to work out the animation myself. So for today, I am going to focus entirely on what it takes to get the animations I want working. If I feel up to it (was a really really long day at work), I will move on to integrating what I learn with the countdown clock.
+
