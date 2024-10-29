@@ -3,10 +3,14 @@ import { useEffect, useState } from "react";
 import AnimatedBorder from "./AnimatedBorder";
 
 const Timer = (props) => {
-  const [time, setTime] = useState(props.duration || 0);
+  const [time, setTime] = useState(0);
   // Set to the original user input duration for animated border timing
-  const initialTime = props.duration || 0;
+  const initialTime = props.duration;
 
+  useEffect(() => {
+    setTime(props.duration)
+  }, [props.duration]);
+  
   useEffect(() => {
     // Maximum timer allowance is 8 hours
     if (time >= 28800000){
@@ -18,7 +22,7 @@ const Timer = (props) => {
       }, 1000);
       return () => clearInterval(interval);
     }
-  });
+  }, [time]);
 
   return(
     <div>

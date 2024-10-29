@@ -7,7 +7,7 @@ function App() {
   const [duration, setDuration] = useState(0);
 
   const handleUserInput = (input) => {
-    console.log(input)
+    setDuration(input);
   }
   return (
     <div className="App">
@@ -15,7 +15,7 @@ function App() {
 
       </header> */}
       <Timer duration={duration} />
-      <Presets />
+      <Presets handleInput={handleUserInput} />
     </div>
   );
 }
