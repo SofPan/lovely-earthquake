@@ -153,3 +153,13 @@ Having a look over the above Next Session notes, I want to change tack a little.
 I only had a few minutes here and there to work on this over the weekend, but I succeeded in making the animated border! I learned that animation-duration CSS property can inherit so I use props to set an animation-duration on a parent class for the animated border, and then inherit it in the CSS ::before pseudo class. At first it was skipping and ending early, but I realized it was because I was using the countdown time, so it was re-rendering every time a second ticked down. I will have a variable that will set to the initial duration that is passed as the borderTime and keep the timer countdown as is, which passes down through the animated border to the Clock component.
 
 That said, I am done my original "Next Session" list so I am going to work on pulling in pre-set sessions and updating the timer based on which one is selected!
+
+I got the presets working out fine, when one is selected the duration is passed to the timer and starts the countdown and animations. 
+
+I was also able to make my keyframe for breathing in/out animations. Right now I just have them on a cycle with the same amount of time. I will make these more dynamic next time I work on this app.
+
+Next Session:
+* Breathe in/out takes in session durations
+* Breath in/out starts at the same time as border animation and countdown clock
+* Research calming colors and use them in the timer instead of the test colors
+* Begin working on custom user sessions
