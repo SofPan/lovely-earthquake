@@ -1,11 +1,24 @@
 import '../../styles/Timer/AnimatedBorder.css';
+import Clock from './Clock';
 
-const AnimatedBorder = () => {
+const AnimatedBorder = (props) => {
   return(
     <div id="clock-border" className="clock-animation">
-      <div className="clock-inner">00:00:00</div>
-      <div className='left-half'></div>
-      <div className='right-half'></div>
+      <div className="clock-inner">
+        <Clock time={props.time} />
+      </div>
+      <div 
+        style={{
+          animationDuration: props.borderTime + 'ms'
+        }} 
+        className='left-half'
+      ></div>
+      <div 
+        style={{
+          animationDuration: props.borderTime + 'ms'
+        }} 
+        className='right-half'
+      ></div>
     </div>
   )
 }

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
-import Clock from './Clock';
 import AnimatedBorder from "./AnimatedBorder";
 
 const Timer = () => {
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState(15000);
+  // Set to the original user input duration for animated border timing
+  const initialTime = 15000;
 
   useEffect(() => {
     // Maximum timer allowance is 8 hours
@@ -21,8 +22,7 @@ const Timer = () => {
 
   return(
     <div>
-      <AnimatedBorder />
-      <Clock time={time}/>
+      <AnimatedBorder time={time} borderTime={initialTime} />
     </div>
   )
 }

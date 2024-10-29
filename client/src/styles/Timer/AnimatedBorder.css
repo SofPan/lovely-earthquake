@@ -35,7 +35,7 @@
   height: 100%;
   box-sizing: border-box;
   border: 20px solid blueviolet;
-  animation-duration: 20s;
+  animation-duration: inherit;
   animation-iteration-count: 1;
   animation-timing-function: linear;
   animation-fill-mode: forwards;

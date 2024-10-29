@@ -10,14 +10,13 @@ const Clock = props => {
     setMinutes(Math.floor((milliseconds / 1000 / 60) % 60));
     setSeconds(Math.floor((milliseconds / 1000) % 60));
   }
-  
+
   useEffect(() => {
     getTimeRemaining(props.time);
   }, [props.time]);
 
   return(
     <div>
-      <h1>Clock Component</h1>
       <h2>
         <span id="hours">
           {hours < 10 ? "0" + hours : hours}
