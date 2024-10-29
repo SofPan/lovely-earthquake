@@ -8,7 +8,9 @@ INSERT INTO sessions (user_id, session_name, session_type, duration, breathing_i
 VALUES
   (1, 'Admin Test', 'PRESET', 300000, 4000, 6000, false, '2024-01-05 08:00:00', '2024-01-05 08:00:00'),
   (1, 'Admin Test 2', 'CUSTOM', 600000, 5000, 5000, true, '2024-01-06 09:00:00', '2024-01-06 09:00:00'),
-  (2, 'Evening Wind Down', 'PRESET', 900000, 7000, 3000, false, '2024-01-07 10:00:00', '2024-01-07 10:00:00');
+  (1, 'Evening Wind Down', 'PRESET', 900000, 7000, 3000, false, '2024-01-07 10:00:00', '2024-01-07 10:00:00'),
+  (2, 'USER Test 1', 'CUSTOM', 600000, 5000, 5000, true, '2024-01-06 09:00:00', '2024-01-06 09:00:00'),
+  (2, 'USER Test 2', 'CUSTOM', 300000, 5000, 5000, true, '2024-01-06 09:00:00', '2024-01-06 09:00:00');
 
   INSERT INTO historic_sessions (user_id, session_id, session_date)
 VALUES

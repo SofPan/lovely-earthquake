@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import axios from 'axios';
 
 const Presets = (props) => {
   const [presets, setPresets] = useState([]);

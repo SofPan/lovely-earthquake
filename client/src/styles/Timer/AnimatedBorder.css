@@ -10,6 +10,30 @@
   100% { transform: rotate(-180deg); }
 }
 
+@keyframes bg-fill--in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bg-fill--out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 #clock-border{
   position: relative;
   height: 300px;
@@ -17,6 +41,43 @@
   margin: 0 auto;
   border-radius: 999px;
   box-shadow: inset 0 0 0 20px lightcoral;
+}
+.clock-inner{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.clock-countdown{
+  position: absolute;
+  width: unset;
+}
+.clock-background{
+  background-color: aquamarine;
+  width: 87%;
+  height: 87%;
+  border-radius: 999px;
+  transform-origin: center center;
+  animation-name: bg-fill;
+}
+
+.breathe-in{
+  animation-name: bg-fill--in
+}
+
+.breathe-out{
+  animation-name: bg-fill--out;
+}
+
+.breathe-in,
+.breathe-out {
+  background-color: aquamarine;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  /* animation-duration: 10s; */
 }
 
 .left-half,
@@ -57,10 +118,4 @@
   transform-origin: center left;
   transform-origin: center left;
   animation-name: r-rotate;
-}
-
-.clock-inner{
-  position: absolute;
-  top: 45%;
-  left: 40%;
 }

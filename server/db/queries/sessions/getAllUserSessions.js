@@ -6,7 +6,6 @@ const getAllUserSessions = async userId => {
   const query = `
     SELECT *
     FROM sessions
-    JOIN users ON users.id = sessions.user_id
     WHERE user_id = $1
     ;
   `;
