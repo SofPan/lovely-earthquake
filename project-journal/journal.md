@@ -170,3 +170,15 @@ Next Session:
 Alright, I have a solid couple of hours to focus today, looking forward to it! It's a VERY Summery Fall day, 22 degrees and sunny on October 30th! Windows are open, breezes are coming in, and the tunes are on. Kane is having a decent nap so the coding ambience is perfect.
 
 Going to start with passing the in/out durations down as props and adjusting the animation-duration accordingly. First things first, I will change the duration state in App to be sessionSettings. This will allow me to pass an object containing the details that I need over to the timer. I am also going to build in a future setting for hold time, because I realize a lot of breathing exercises involve holding your breath for a time so I want it ready to plug in when I have that in the finalized presets. 
+
+Got the animation timed and working well. Going to sort out what my colors should be now so I can move away from the garish clashing test colors.
+
+Finished my animations and colors, the timer itself is looking and behaving great! Going to get my next session tasks together and call it a day, I want to enjoy my day off with my dog!
+
+Next Session:
+* Create custom session form
+* Form makes POST request and updates DB records
+* App state updates after POST request and immediately shows the new session
+* Only the user that created the custom session should be able to view it
+* All users should be able to view Preset sessions (admin account)
+* Change Preset seeds to be real-world breath work timers & reset DB
