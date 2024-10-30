@@ -55,7 +55,7 @@
   width: unset;
 }
 .clock-background{
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   width: 87%;
   height: 87%;
   border-radius: 999px;
@@ -72,7 +72,8 @@
 }
 
 .breathe-in,
-.breathe-out {
+.breathe-out,
+.hold {
   background-color: aquamarine;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;

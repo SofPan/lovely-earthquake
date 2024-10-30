@@ -163,3 +163,10 @@ Next Session:
 * Breath in/out starts at the same time as border animation and countdown clock
 * Research calming colors and use them in the timer instead of the test colors
 * Begin working on custom user sessions
+
+
+### Wednesday, October 30, 2024
+
+Alright, I have a solid couple of hours to focus today, looking forward to it! It's a VERY Summery Fall day, 22 degrees and sunny on October 30th! Windows are open, breezes are coming in, and the tunes are on. Kane is having a decent nap so the coding ambience is perfect.
+
+Going to start with passing the in/out durations down as props and adjusting the animation-duration accordingly. First things first, I will change the duration state in App to be sessionSettings. This will allow me to pass an object containing the details that I need over to the timer. I am also going to build in a future setting for hold time, because I realize a lot of breathing exercises involve holding your breath for a time so I want it ready to plug in when I have that in the finalized presets. 

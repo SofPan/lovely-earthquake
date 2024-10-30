@@ -28,9 +28,21 @@ const Presets = (props) => {
 
 
   const mapAndFilterPresets = presets.filter(session => session.session_type !== "CUSTOM").map(session => {
+    // console.log("session", session);
     return <li key={session.id}>
       {session.session_name} : 
-      <button onClick={() => {props.handleInput(session.duration)}}>Start Session</button>
+      <button 
+        onClick={
+          () => {
+            props.handleInput({
+              duration: session.duration,
+              breatheIn: session.breathing_in_time,
+              breatheOut: session.breathing_out_time,
+              hold: session.hold || 4000
+            })
+          }}>
+          Start Session
+      </button>
     </li>
   });
 

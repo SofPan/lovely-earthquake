@@ -4,17 +4,17 @@ import Presets from './components/Sessions/Presets';
 import Timer from './components/Timer/Timer'
 
 function App() {
-  const [duration, setDuration] = useState(0);
+  const [sessionSettings, setSessionSettings] = useState(0);
 
   const handleUserInput = (input) => {
-    setDuration(input);
+    setSessionSettings(input);
   }
   return (
     <div className="App">
       {/* <header className="App-header">
 
       </header> */}
-      <Timer duration={duration} />
+      <Timer sessionSettings={sessionSettings} />
       <Presets handleInput={handleUserInput} />
     </div>
   );

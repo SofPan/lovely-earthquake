@@ -5,11 +5,10 @@ import AnimatedBorder from "./AnimatedBorder";
 const Timer = (props) => {
   const [time, setTime] = useState(0);
   // Set to the original user input duration for animated border timing
-  const initialTime = props.duration;
 
   useEffect(() => {
-    setTime(props.duration)
-  }, [props.duration]);
+    setTime(props.sessionSettings.duration || 0)
+  }, [props.sessionSettings.duration]);
   
   useEffect(() => {
     // Maximum timer allowance is 8 hours
@@ -26,7 +25,7 @@ const Timer = (props) => {
 
   return(
     <div>
-      <AnimatedBorder time={time} borderTime={initialTime} />
+      <AnimatedBorder settings={props.sessionSettings} time={time} borderTime={props.sessionSettings.duration} />
     </div>
   )
 }
