@@ -18,6 +18,7 @@ CREATE TABLE sessions (
   duration INTEGER DEFAULT 0, -- Time in milliseconds, 0 for indefinite
   breathing_in_time INTEGER, -- Time in milliseconds
   breathing_out_time INTEGER, -- Time in milliseconds
+  hold_time INTEGER, -- Time in milliseconds
   is_saved BOOLEAN DEFAULT false,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

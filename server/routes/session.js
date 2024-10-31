@@ -47,7 +47,13 @@ router.get('/:id', (req, res) => {
 
 // POST a new session
 router.post('/', (req, res) => {
-  createNewSession(req.body)
+  console.log("POST route", req.body);
+  const sessionParams = {
+    ...req.body,
+    // userId: req.session.userId
+    userId: 1
+  }
+  createNewSession(sessionParams)
     .then(result => result)
     .catch(error => {
       console.error('Error creating session:', error);

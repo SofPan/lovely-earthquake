@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Timer from './components/Timer/Timer'
 import SessionsList from './components/Sessions/SessionsList';
+import CreateNewSession from './components/Sessions/CreateNewSession';
 
 function App() {
   const [sessionSettings, setSessionSettings] = useState(0);
@@ -14,8 +15,9 @@ function App() {
       {/* <header className="App-header">
 
       </header> */}
-      <Timer sessionSettings={sessionSettings} />
-      <SessionsList handleInput={handleUserInput} />
+      {/* <Timer sessionSettings={sessionSettings} /> */}
+      {/* <SessionsList handleInput={handleUserInput} /> */}
+      <CreateNewSession />
     </div>
   );
 }
