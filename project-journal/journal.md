@@ -188,3 +188,18 @@ Next Session:
 Happy Halloween! Got woken up early today by my neighbor's smoke alarm, so why not get some code down right?
 
 Going to work up the custom session form really quickly, and tackle the to-do list from there. 
+
+Excellent, so I have the form gathering relevant data, and sending a POST request with an object to the server then updating the database.
+
+Things not to forget:
+- elements is the value I want in order to easily collect individual form fields (e.target.elements.NAME.value)
+- JSON.stringify the body object in fetch request
+- SINGLE QUOTES on strings in Postgres
+
+I have some errands to run ahead of trick-or-treating tonight so not sure if I will get to work on this again today or not. Regardless, I am really happy with what I got done today and I will work on the rest of the above next session list next time I touch this. Hopefully tomorrow evening, but I have a very full weekend ahead of me between extra work hours and the holiday meeting.
+
+Next Session:
+* App state updates after POST request and immediately shows the new session
+* Only the user that created the custom session should be able to view it
+* All users should be able to view Preset sessions (admin account)
+* Change Preset seeds to be real-world breath work timers & reset DB 
