@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import Presets from './components/Sessions/Presets';
 import Timer from './components/Timer/Timer'
+import SessionsList from './components/Sessions/SessionsList';
 
 function App() {
   const [sessionSettings, setSessionSettings] = useState(0);
@@ -15,7 +15,7 @@ function App() {
 
       </header> */}
       <Timer sessionSettings={sessionSettings} />
-      <Presets handleInput={handleUserInput} />
+      <SessionsList handleInput={handleUserInput} />
     </div>
   );
 }

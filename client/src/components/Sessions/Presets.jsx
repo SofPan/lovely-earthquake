@@ -47,12 +47,10 @@ const Presets = (props) => {
   });
 
   return(
-    <div>
-      <h1>Preset List</h1>
-      <ul>
-        {mapAndFilterPresets}
-      </ul>
-    </div>
+    <>
+      <h1>Presets</h1>
+      {mapAndFilterPresets}
+    </>
   )
 }
 

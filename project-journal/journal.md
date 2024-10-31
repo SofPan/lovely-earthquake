@@ -182,3 +182,9 @@ Next Session:
 * Only the user that created the custom session should be able to view it
 * All users should be able to view Preset sessions (admin account)
 * Change Preset seeds to be real-world breath work timers & reset DB
+
+
+### Thursday, October 31, 2024
+Happy Halloween! Got woken up early today by my neighbor's smoke alarm, so why not get some code down right?
+
+Going to work up the custom session form really quickly, and tackle the to-do list from there. 
