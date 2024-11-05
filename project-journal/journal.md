@@ -198,8 +198,26 @@ Things not to forget:
 
 I have some errands to run ahead of trick-or-treating tonight so not sure if I will get to work on this again today or not. Regardless, I am really happy with what I got done today and I will work on the rest of the above next session list next time I touch this. Hopefully tomorrow evening, but I have a very full weekend ahead of me between extra work hours and the holiday meeting.
 
+Removing the App state update after POST because I realized that is not going to be needed with the final app behavior. Custom Sessions will fully re-render in a separate space than the form submission, so it doesn't need to visually update in real time. 
+
 Next Session:
-* App state updates after POST request and immediately shows the new session
 * Only the user that created the custom session should be able to view it
 * All users should be able to view Preset sessions (admin account)
 * Change Preset seeds to be real-world breath work timers & reset DB 
+
+### Tuesday, November 5, 2024
+
+It has been...a not great weekend. This isn't the place to go into details but suffice it to say there were some good reasons not to be on my computer for several days. 
+
+That said, I am looking forward to diving into this today. I am going to pivot away from my next session plan and work out login/logout/register components because I also want to get cookies and hashed passwords sorted out.
+
+<!-- TODO -->
+Defer to future Session:
+* Only the user that created the custom session should be able to view it
+* All users should be able to view Preset sessions (admin account)
+* Change Preset seeds to be real-world breath work timers & reset DB 
+
+This session:
+* Build Login and Logout button components
+* Server-side implement hashed passwords
+* Server-side create cookie for logged in user on login success
